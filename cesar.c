@@ -17,7 +17,7 @@ void cesar(char str[], int shift, bool isHashedYet) {
     // We read the string until the end of the word
     while (str[i] != '\0') {
         if (str[i] >= 'A' && str[i] <= 'Z') {
-            // In C language in connected to a number (example : A = 65, Z = 90)
+            // In C language one caracter is always connected to a number (example : A = 65, Z = 90)
             // we substrack the value of each caracter by 65 in order to obtain a new defined numeric value
             int c = str[i] - 'A';
             // Selon le booléen "isHashedYet" on décale
@@ -30,6 +30,7 @@ void cesar(char str[], int shift, bool isHashedYet) {
             }
             // We need to get back to the beginning of the alphabet is higher than 25
             c = (c % 26 + 26) % 26;
+            // We give to the caracter the value resulting from the c algorythm
             str[i] = c + 'A';
         }
         i++;
