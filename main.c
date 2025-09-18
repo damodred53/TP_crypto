@@ -26,6 +26,7 @@ int main() {
     cesar(text2, 3, true);
     printf("César déchiffré : %s\n", text2);
 
+    // call to the function matrice, the brackets are empty because this function doesn't need any.
     matrice();
     printf("\n");
 
